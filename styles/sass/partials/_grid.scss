@@ -1,0 +1,35 @@
+@import "susy";
+@import "theme-default";
+$number-of-columns: 16;
+$container-span: $number-of-columns - 2;
+
+$susy: (
+  columns: $number-of-columns,
+  debug: (
+    image: show
+  )
+);
+@mixin sub-container-style($height, $color: $header-background-color) {
+  height: $height;
+  background-color: $color;
+  @include span($number-of-columns narrow);
+  //   @include span($container-span wider);
+  //   margin-left: span(1 narrow);
+}
+
+.main-container {
+  height: 100vh;
+  @include container();
+
+  .header {
+    @include sub-container-style($height: 15vh);
+  }
+
+  .footer {
+    @include sub-container-style(5vh, $footer-background-color);
+  }
+
+  .content {
+    @include sub-container-style(80vh, $content-background-color);
+  }
+}

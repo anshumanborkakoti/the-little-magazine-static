@@ -1,0 +1,25 @@
+@import "compass/reset";
+@import "../stylesheets/normalize.min.css";
+// @import "partials/h5bp";
+@import "partials/grid";
+@import "partials/theme-default";
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.main-container {
+  background-image: url("../../img/header_background.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+p {
+  padding: 10px;
+  color: white;
+  opacity: 1;
+}

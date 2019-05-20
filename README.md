@@ -1,0 +1,1 @@
+Little magazine project containing initial static resources for static website

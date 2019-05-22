@@ -68,30 +68,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 40, ../sass/partials/_theme-default.scss */
+/* line 27, ../sass/partials/_theme-default.scss */
 * {
   font-family: "Prata", serif !important;
-  font-size: 15px;
+  line-height: 150% !important;
 }
 
-/* line 44, ../sass/partials/_theme-default.scss */
-p {
-  margin: auto;
-  column-count: 3;
-  line-height: 1.25em;
-}
-
-/* line 20, ../sass/partials/_grid.scss */
+/* line 23, ../sass/partials/_grid.scss */
 .main-container {
   height: 100vh;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
-  background-size: 6.32911%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
 }
 /* line 12, C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/susy-2.2.14/sass/susy/output/support/_clearfix.scss */
 .main-container:after {
@@ -99,70 +87,98 @@ p {
   display: block;
   clear: both;
 }
-/* line 24, ../sass/partials/_grid.scss */
+/* line 27, ../sass/partials/_grid.scss */
 .main-container .header {
-  height: 15vh;
-  background-color: rgba(227, 227, 190, 0.6);
-  width: 100%;
+  height: 30vh;
+  background-color: #ffffff;
+  width: 89.87342%;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
+  margin-right: 1.23457%;
+  margin-left: 5.06329%;
 }
-/* line 28, ../sass/partials/_grid.scss */
+/* line 29, ../sass/partials/_grid.scss */
+.main-container .header .magazine-title {
+  height: 50%;
+  width: 64.55696%;
+  float: left;
+  margin-right: 1.23457%;
+  margin-left: 1.89873%;
+}
+/* line 36, ../sass/partials/_grid.scss */
 .main-container .footer {
   height: 5vh;
-  background-color: rgba(203, 193, 209, 0.6);
-  width: 100%;
+  background-color: #e2e2e2;
+  width: 89.87342%;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
+  margin-right: 1.23457%;
+  margin-left: 5.06329%;
 }
-/* line 32, ../sass/partials/_grid.scss */
+/* line 40, ../sass/partials/_grid.scss */
 .main-container .content {
-  height: 80vh;
-  background-color: rgba(255, 255, 234, 0.6);
-  width: 100%;
+  height: 65vh;
+  background-color: #ffffff;
+  width: 89.87342%;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
+  margin-right: 1.23457%;
+  margin-left: 5.06329%;
 }
 
-/* line 40, ../sass/partials/_theme-default.scss */
+/* line 27, ../sass/partials/_theme-default.scss */
 * {
   font-family: "Prata", serif !important;
-  font-size: 15px;
-}
-
-/* line 44, ../sass/partials/_theme-default.scss */
-p {
-  margin: auto;
-  column-count: 3;
-  line-height: 1.25em;
+  line-height: 150% !important;
 }
 
 /* line 7, ../sass/main.scss */
-a {
-  color: rgba(255, 255, 234, 0.6);
-}
-/* line 9, ../sass/main.scss */
-a:hover {
-  color: rgba(255, 255, 234, 0.6);
+body {
+  background-color: #ffffff;
 }
 
-/* line 14, ../sass/main.scss */
+/* line 10, ../sass/main.scss */
 .main-container {
-  background-image: url("../../img/header_background.jpg");
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
+  font-size: 15px;
+  color: black;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
+.header {
+  font-size: 12px;
+}
+/* line 18, ../sass/main.scss */
+.header .header-nav {
+  padding: 20px;
+}
+/* line 19, ../sass/main.scss */
+.header .header-nav a {
+  color: black;
+}
+/* line 2, ../sass/partials/_utils.scss */
+.header .header-nav a:after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  transition: all 300ms ease-in 50ms;
+}
+/* line 11, ../sass/partials/_utils.scss */
+.header .header-nav a:hover:after {
+  width: 100%;
+}
+/* line 24, ../sass/main.scss */
+.header .header-nav li:not(:last-child) {
+  border-right: solid 1px #e2e2e2;
+}
+/* line 28, ../sass/main.scss */
+.header .magazine-title {
+  padding: 30px 0 0 0;
+  vertical-align: middle;
+  font-size: 60px;
+}
+
+/* line 35, ../sass/main.scss */
 p {
   padding: 10px;
-  color: white;
-  opacity: 1;
+  margin: auto;
+  column-count: 3;
 }

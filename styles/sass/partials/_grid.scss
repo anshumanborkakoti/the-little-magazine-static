@@ -6,15 +6,18 @@ $container-span: $number-of-columns - 2;
 $susy: (
   columns: $number-of-columns,
   debug: (
-    image: show
+    image: false
   )
 );
 @mixin sub-container-style($height, $color: $header-background-color) {
   height: $height;
+  //Test
+  // border: dotted black 1px;
+  // @include span($number-of-columns narrow);
+
   background-color: $color;
-  @include span($number-of-columns narrow);
-  //   @include span($container-span wider);
-  //   margin-left: span(1 narrow);
+  @include span($container-span wider);
+  margin-left: span(1 narrow);
 }
 
 .main-container {
@@ -22,7 +25,12 @@ $susy: (
   @include container();
 
   .header {
-    @include sub-container-style($height: 15vh);
+    @include sub-container-style($height: 30vh);
+    .magazine-title {
+      height: 50%;
+      @include span(10 wider);
+      margin-left: span(0.5 narrow);
+    }
   }
 
   .footer {
@@ -30,6 +38,6 @@ $susy: (
   }
 
   .content {
-    @include sub-container-style(80vh, $content-background-color);
+    @include sub-container-style(65vh, $content-background-color);
   }
 }

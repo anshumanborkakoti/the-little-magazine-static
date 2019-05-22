@@ -3,54 +3,36 @@
 
 $opacity: 0.6;
 
-$rgba-primary-0: rgba(255, 255, 234, $opacity); // Main Primary color */
-$rgba-primary-1: rgba(255, 255, 242, $opacity);
-$rgba-primary-2: rgba(227, 227, 190, $opacity);
-$rgba-primary-3: rgba(255, 255, 246, $opacity);
-$rgba-primary-4: rgba(255, 255, 198, $opacity);
+// As hex codes */
+$color-primary: #ffffff;
+$color-secondary: #aeaeae;
+$color-secondary-2: #e2e2e2;
+// As RGBa codes */
+$rgba-primary-0: rgba(255, 255, 255, 1);
+$rgba-secondary: rgba(174, 174, 174, 1);
+$rgba-secondary-2: rgba(226, 226, 226, 1);
 
-$rgba-secondary-1-0: rgba(
-  212,
-  195,
-  210,
-  $opacity
-); // Main Secondary color (1) */
-$rgba-secondary-1-1: rgba(185, 175, 183, $opacity);
-$rgba-secondary-1-2: rgba(157, 131, 154, $opacity);
-$rgba-secondary-1-3: rgba(251, 243, 250, $opacity);
-$rgba-secondary-1-4: rgba(230, 178, 224, $opacity);
+@mixin rgba-primary($opacity: 1) {
+  color: rgba(255, 255, 255, $opacity) !important;
+}
 
-$rgba-secondary-2-0: rgba(
-  245,
-  249,
-  229,
-  $opacity
-); // Main Secondary color (2) */
-$rgba-secondary-2-1: rgba(243, 246, 233, $opacity);
-$rgba-secondary-2-2: rgba(210, 217, 182, $opacity);
-$rgba-secondary-2-3: rgba(253, 255, 246, $opacity);
-$rgba-secondary-2-4: rgba(240, 252, 195, $opacity);
+@mixin rgba-secondary($opacity: 1) {
+  color: rgba(255, 255, 255, $opacity) !important;
+}
 
-$rgba-complement-0: rgba(203, 193, 209, $opacity); // Main Complement color */
-$rgba-complement-1: rgba(176, 170, 179, $opacity);
-$rgba-complement-2: rgba(143, 128, 151, $opacity);
-$rgba-complement-3: rgba(248, 243, 251, $opacity);
-$rgba-complement-4: rgba(211, 180, 228, $opacity);
+@mixin rgba-secondary-2($opacity: 1) {
+  color: rgba(255, 255, 255, $opacity) !important;
+}
 
 * {
   font-family: "Prata", serif !important;
-  font-size: 15px;
-}
-p {
-  margin: auto;
-  column-count: 3;
-  line-height: 1.25em;
+  line-height: 150% !important;
 }
 
-$header-background-color: $rgba-primary-2;
-$content-background-color: $rgba-primary-0;
-$footer-background-color: $rgba-complement-0;
-$link-color: $rgba-primary-0;
-$link-color-hover: $rgba-secondary-2-1;
+$header-background-color: $color-primary;
+$content-background-color: $color-primary;
+$footer-background-color: $color-secondary-2;
+$link-color: black;
+$link-color-hover: lighten(black, 60%);
 
-$text-color: $rgba-primary-0;
+$text-color: black;

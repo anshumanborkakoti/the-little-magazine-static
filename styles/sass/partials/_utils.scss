@@ -1,0 +1,14 @@
+@mixin animate-underline() {
+  &:after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: all 300ms ease-in 50ms;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}

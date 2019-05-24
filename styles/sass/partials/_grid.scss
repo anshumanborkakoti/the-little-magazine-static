@@ -5,14 +5,22 @@ $container-span: $number-of-columns - 2;
 
 $susy: (
   columns: $number-of-columns,
+  global-box-sizing: border-box,
+  math: fluid,
   debug: (
     image: false
   )
 );
-@mixin sub-container-style($height, $color: $header-background-color) {
-  height: $height;
+@include layout($susy float inside);
+div {
   //Test
-  // border: dotted black 1px;
+  //border: dotted black 1px;
+}
+@mixin sub-container-style($height: "none", $color: $header-background-color) {
+  @if $height != "none" {
+    height: $height;
+  }
+  //Test full page width
   // @include span($number-of-columns narrow);
 
   background-color: $color;
@@ -25,19 +33,20 @@ $susy: (
   @include container();
 
   .header {
-    @include sub-container-style($height: 30vh);
-    .magazine-title {
-      height: 50%;
-      @include span(10 wider);
-      margin-left: span(0.5 narrow);
-    }
+    height: 5%;
+    @include sub-container-style();
   }
-
+  .magazine-title {
+    height: 20%;
+    @include sub-container-style();
+  }
   .footer {
-    @include sub-container-style(5vh, $footer-background-color);
+    @include sub-container-style($color: $footer-background-color);
+    height: 5%;
   }
 
   .content {
-    @include sub-container-style(65vh, $content-background-color);
+    @include sub-container-style($color: $content-background-color);
+    height: 70%;
   }
 }

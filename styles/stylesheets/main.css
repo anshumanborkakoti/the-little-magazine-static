@@ -1,8 +1,6 @@
 @import url(../stylesheets/normalize.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Prata&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Prata&display=swap");
 /* line 5, C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,13 +66,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 27, ../sass/partials/_theme-default.scss */
+/* line 37, ../sass/partials/_theme-default.scss */
 * {
-  font-family: "Prata", serif !important;
+  font-family: "Prata", "Roboto Slab", "Helvetica", serif !important;
   line-height: 150% !important;
 }
 
-/* line 23, ../sass/partials/_grid.scss */
+/* line 31, ../sass/partials/_grid.scss */
 .main-container {
   height: 100vh;
   max-width: 100%;
@@ -87,46 +85,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   clear: both;
 }
-/* line 27, ../sass/partials/_grid.scss */
+/* line 35, ../sass/partials/_grid.scss */
 .main-container .header {
-  height: 30vh;
+  height: 5%;
   background-color: #ffffff;
-  width: 89.87342%;
+  width: 88.75%;
   float: left;
-  margin-right: 1.23457%;
-  margin-left: 5.06329%;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-left: 5%;
 }
-/* line 29, ../sass/partials/_grid.scss */
-.main-container .header .magazine-title {
-  height: 50%;
-  width: 64.55696%;
+/* line 39, ../sass/partials/_grid.scss */
+.main-container .magazine-title {
+  height: 20%;
+  background-color: #ffffff;
+  width: 88.75%;
   float: left;
-  margin-right: 1.23457%;
-  margin-left: 1.89873%;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-left: 5%;
 }
-/* line 36, ../sass/partials/_grid.scss */
+/* line 43, ../sass/partials/_grid.scss */
 .main-container .footer {
-  height: 5vh;
   background-color: #e2e2e2;
-  width: 89.87342%;
+  width: 88.75%;
   float: left;
-  margin-right: 1.23457%;
-  margin-left: 5.06329%;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-left: 5%;
+  height: 5%;
 }
-/* line 40, ../sass/partials/_grid.scss */
+/* line 48, ../sass/partials/_grid.scss */
 .main-container .content {
-  height: 65vh;
   background-color: #ffffff;
-  width: 89.87342%;
+  width: 88.75%;
   float: left;
-  margin-right: 1.23457%;
-  margin-left: 5.06329%;
-}
-
-/* line 27, ../sass/partials/_theme-default.scss */
-* {
-  font-family: "Prata", serif !important;
-  line-height: 150% !important;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-left: 5%;
+  height: 70%;
 }
 
 /* line 7, ../sass/main.scss */
@@ -139,21 +136,16 @@ body {
   font-size: 15px;
   color: black;
 }
-
-/* line 15, ../sass/main.scss */
-.header {
+/* line 13, ../sass/main.scss */
+.main-container .header {
   font-size: 12px;
 }
-/* line 18, ../sass/main.scss */
-.header .header-nav {
-  padding: 20px;
-}
-/* line 19, ../sass/main.scss */
-.header .header-nav a {
+/* line 23, ../sass/partials/_utils.scss */
+.main-container .header .header-nav a {
   color: black;
 }
 /* line 2, ../sass/partials/_utils.scss */
-.header .header-nav a:after {
+.main-container .header .header-nav a:after {
   content: "";
   width: 0px;
   height: 1px;
@@ -162,21 +154,56 @@ body {
   transition: all 300ms ease-in 50ms;
 }
 /* line 11, ../sass/partials/_utils.scss */
-.header .header-nav a:hover:after {
+.main-container .header .header-nav a:hover:after {
   width: 100%;
 }
-/* line 24, ../sass/main.scss */
-.header .header-nav li:not(:last-child) {
+/* line 27, ../sass/partials/_utils.scss */
+.main-container .header .header-nav li:not(:last-child) {
   border-right: solid 1px #e2e2e2;
 }
-/* line 28, ../sass/main.scss */
-.header .magazine-title {
-  padding: 30px 0 0 0;
+/* line 16, ../sass/main.scss */
+.main-container .magazine-title {
+  padding-top: 1.875%;
   vertical-align: middle;
   font-size: 60px;
+  border-bottom: solid 2px #e2e2e2;
+}
+/* line 23, ../sass/main.scss */
+.main-container .content .mainImage {
+  width: 63.75%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  height: 80%;
+  display: inline-block;
+  margin: 3.125%;
+  box-shadow: 5px 10px 10px #c9c9c9;
+}
+/* line 30, ../sass/main.scss */
+.main-container .content .articles {
+  display: inline-block;
+  height: 80%;
+  width: 23.75%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin: 3.125%;
+  overflow: hidden;
+}
+/* line 37, ../sass/main.scss */
+.main-container .content .article-heading {
+  font-size: 25px;
+}
+/* line 42, ../sass/main.scss */
+.main-container .footer {
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+  padding-top: 0.625%;
+  padding-bottom: 0.625%;
 }
 
-/* line 35, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 p {
   padding: 10px;
   margin: auto;

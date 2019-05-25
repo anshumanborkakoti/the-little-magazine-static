@@ -26,6 +26,7 @@ body {
       display: inline-block;
       margin: span(0.5 narrower);
       box-shadow: 5px 10px 10px darken(rgba-secondary-2(7), 10%);
+      object-fit: cover;
     }
     .articles {
       display: inline-block;

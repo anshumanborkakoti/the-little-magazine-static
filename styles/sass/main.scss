@@ -1,9 +1,9 @@
-@import "compass/reset";
-@import "../stylesheets/normalize.min.css";
+@import 'compass/reset';
+@import '../stylesheets/normalize.min.css';
 // @import "partials/h5bp";
-@import "partials/grid";
-@import "partials/theme-default";
-@import "partials/utils";
+@import 'partials/css_grid';
+@import 'partials/theme-default';
+@import 'partials/utils';
 body {
   background-color: $color-primary;
 }
@@ -14,25 +14,22 @@ body {
     @include style-header-footer-links;
   }
   .magazine-title {
-    padding-top: span(0.5 narrow);
     vertical-align: middle;
     font-size: 60px;
     border-bottom: solid 2px rgba-secondary-2(7);
+    padding-top: 20px;
+    padding-left: 20px;
   }
   .content {
     .mainImage {
-      @include span(10 wider);
-      height: 80%;
       display: inline-block;
-      margin: span(0.5 narrower);
       box-shadow: 5px 10px 10px darken(rgba-secondary-2(7), 10%);
       object-fit: cover;
+      padding: 5px;
     }
     .articles {
       display: inline-block;
       height: 80%;
-      @include span(4 narrow);
-      margin: span(0.5 narrower);
       overflow: hidden;
     }
     .article-heading {
@@ -43,14 +40,9 @@ body {
   .footer {
     text-align: center;
     font-style: italic;
+    font-weight: 800;
     font-size: 12px;
-    padding-top: gutter();
-    padding-bottom: gutter();
+    padding-top: 1.25em;
+    padding-bottom: 1em;
   }
-}
-
-p {
-  padding: 10px;
-  margin: auto;
-  column-count: 3;
 }

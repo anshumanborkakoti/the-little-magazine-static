@@ -22,13 +22,11 @@ body {
   }
   .content {
     .mainImage {
-      display: inline-block;
       box-shadow: 5px 10px 10px darken(rgba-secondary-2(7), 10%);
       object-fit: cover;
       padding: 5px;
     }
     .articles {
-      display: inline-block;
       height: 80%;
       overflow: hidden;
     }

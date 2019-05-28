@@ -184,22 +184,20 @@ body {
 }
 /* line 24, ../sass/main.scss */
 .main-container .content .mainImage {
-  display: inline-block;
   box-shadow: 5px 10px 10px #c9c9c9;
   object-fit: cover;
   padding: 5px;
 }
-/* line 30, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 .main-container .content .articles {
-  display: inline-block;
   height: 80%;
   overflow: hidden;
 }
-/* line 35, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .main-container .content .article-heading {
   font-size: 25px;
 }
-/* line 40, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 .main-container .footer {
   text-align: center;
   font-style: italic;
